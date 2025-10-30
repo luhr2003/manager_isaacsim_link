@@ -32,7 +32,7 @@ if not site_packages:
     raise RuntimeError("Unable to find site-packages directory, please specify path manually")
 
 isaacsim_site_packages = site_packages / "isaacsim"
-omni_site_packages = site_packages / "omni"
+# omni_site_packages = site_packages / "omni"
 carb_site_packages = site_packages / "carb"
 
 empty_record = {
