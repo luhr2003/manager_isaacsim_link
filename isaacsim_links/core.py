@@ -32,7 +32,7 @@ if not site_packages:
     raise RuntimeError("Unable to find site-packages directory, please specify path manually")
 
 isaacsim_site_packages = site_packages / "isaacsim"
-# omni_site_packages = site_packages / "omni"
+omni_site_packages = site_packages / "omni"
 carb_site_packages = site_packages / "carb"
 
 empty_record = {
@@ -51,9 +51,9 @@ def check_base_paths():
     if not isaacsim_site_packages.exists():
         logger.error(f"Isaac Sim directory not found: {isaacsim_site_packages}")
         raise RuntimeError(f"Isaac Sim directory not found: {isaacsim_site_packages}")
-    if not omni_site_packages.exists():
-        logger.error(f"Omni directory not found: {omni_site_packages}")
-        raise RuntimeError(f"Omni directory not found: {omni_site_packages}")
+    # if not omni_site_packages.exists():
+    #     logger.error(f"Omni directory not found: {omni_site_packages}")
+    #     raise RuntimeError(f"Omni directory not found: {omni_site_packages}")
     if not carb_site_packages.exists():
         logger.warning(f"Carb directory not found: {carb_site_packages}")
         try:
